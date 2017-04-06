@@ -1,20 +1,25 @@
 #!/bin/bash
 
-while getopts ":u:n:" opt;
+while getopts ":un:" opt;
 do
 	case "$opt" in
 
-	u) sudo apt-get update
+	u) UPDATE=YES
 	;;
 
-	n) sudo apt-get install $OPTARG -y
-	   echo "Installed $OPTARG" >&2
-	;;
+	n) UPDATE=NO
+	   PACKAGE=$OPTARG
+	   ;;
 	esac
 done
 
-#sudo apt-get install $PACKAGE -y
+if [ $UPDATE == YES ]
+then
+  sudo apt-get update
+fi
 
-#echo $PACKAGE installed
+sudo apt-get install $PACKAGE -y
+
+echo $PACKAGE installed
 
 exit 0
