@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo cp /etc/wpa_supplicant/$1 /etc/wpa_supplicant/wpa_supplicant.conf
+
+sudo dhclient -r wlan0
+sudo ifdown wlan0
+sudo ifup wlan0
+sudo dhclient -v wlan0
+
+echo
+iwconfig wlan0
+ifconfig wlan0
