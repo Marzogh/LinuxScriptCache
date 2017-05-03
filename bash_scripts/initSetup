@@ -19,7 +19,9 @@ sudo apt-get update && sudo apt-get upgrade -y #First update the apt repos and u
 sudo apt-get install git wget -y #Now install git and wget
 
 git clone https://github.com/Marzogh/LinuxScriptCache.git ~/github/LinuxScriptCache # Clone Linux script cache from Github
-sudo cp ~/github/bash_scripts/* ~/bin #Copy scripts from repo to local bin folder
+cp ~/github/LinuxScriptCache/bash_scripts/onlogin ~/bin/onlogin #Move onlogin to ~/bin
+sudo chmod+x ~/bin/* #Make everything in ~/bin executable
+onlogin
 
 echo 'System is ready to go!'
 
