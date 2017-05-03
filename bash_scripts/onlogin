@@ -3,9 +3,13 @@
 # Pull latest changes from github repos
 
 	#LinuxShellScripts repo
-	cd ~/github/LinuxShellScripts
+	cd ~/github/LinuxScriptCache
 	git pull
 	cd ~
+
+	#Update the local scripts
+	sudo cp ~/github/LinuxScriptCache/bash_scripts/* ~/bin
+	sudo chmod +x ~/bin/*
 
 # Update the list of apt repos
 sudo apt-get update
