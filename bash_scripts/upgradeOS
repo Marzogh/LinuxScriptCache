@@ -21,7 +21,7 @@ then
 fi
 
 echo Locating and installing upgrades - if any
-sudo apt-get install $PACKAGE -y
+sudo apt-get upgrade -y
 echo OS upgrade complete
 
 exit 0
