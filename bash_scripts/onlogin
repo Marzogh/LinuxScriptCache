@@ -8,10 +8,13 @@
 	cd ~
 
 	#Update the local scripts
+	echo Copying updated scripts to ~/bin
 	sudo cp ~/github/LinuxScriptCache/bash_scripts/* ~/bin
 	sudo chmod +x ~/bin/*
+	echo User scripts updated and made executable.
 
 # Update the list of apt repos
+echo Getting apt repository update
 sudo apt-get update
 
 #
