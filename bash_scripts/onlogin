@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# Pull latest changes from github repos
+echo "Checking internet connectivity..."
+ping -c 5 www.google.com>>/dev/null
+
+if [ $? -eq  0 ]
+then
+	echo "Connected to the internet"
+	# Pull latest changes from github repos
 
 	#LinuxShellScripts repo
 	cd ~/github/LinuxScriptCache
@@ -8,13 +14,17 @@
 	cd ~
 
 	#Update the local scripts
-	echo Copying updated scripts to ~/bin
+	echo "Copying updated scripts to ~/bin"
 	sudo cp ~/github/LinuxScriptCache/bash_scripts/* ~/bin
 	sudo chmod +x ~/bin/*
-	echo User scripts updated and made executable.
+	echo "User scripts updated and made executable"
 
-# Update the list of apt repos
-echo Getting apt repository update
-sudo apt-get update
+	# Update the list of apt repos
+	echo "Getting apt repository update"
+	sudo apt-get update
 
-#
+else
+	echo "Not connected to the internet. Exiting onlogin script"
+fi
+
+exit 0
