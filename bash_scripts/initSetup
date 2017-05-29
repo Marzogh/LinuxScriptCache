@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Setup wireless networking
   sudo service networking stop #Stop wireless networking service
