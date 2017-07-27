@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Back up the current wpa_supplicant configuration
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.bak
+
+#Apply the new wpa_supplicant configuration
 sudo cp /etc/wpa_supplicant/$1 /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo dhclient -r wlan0
