@@ -14,10 +14,11 @@ Cache of useful Linux scripts written primarily for use with the Raspberry Pi - 
 
 ```./initSetup```
 
-#### If you want to save yourself the trouble of going through all the steps above, just follow the one step below (and enter the sudo password when the system asks you for it. ***This method is not recommended unless you really know what you are signing up for***
-- Copy and paste the following line and hit 'Enter/Return'
+> If you want to save yourself the trouble of going through all the steps above, just follow the one step below (and enter the sudo password when the system asks you for it. ***This method is not recommended unless you really know what you are signing up for***
 
-```curl -s https://raw.githubusercontent.com/Marzogh/LinuxScriptCache/master/bash_scripts/initSetup | sudo bash```
+> Copy and paste the following line and hit 'Enter/Return'
+
+> ```curl -s https://raw.githubusercontent.com/Marzogh/LinuxScriptCache/master/bash_scripts/initSetup | sudo bash```
 
 
 ## About scripts
