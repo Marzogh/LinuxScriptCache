@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+echo $BASH_VERSION
 
 # Setup wireless networking
   sudo service networking stop #Stop wireless networking service

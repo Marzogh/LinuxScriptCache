@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+echo $BASH_VERSION
 
 #Make required directories
 mkdir ~/bin ~/github #Make folders to store scripts and github clones
